@@ -1,4 +1,5 @@
 // copy this into your BDScript editor //
+// credit to trunghere12345 on discord //
 BDscript 2 Userinfo Code
 
 ```$nomention
