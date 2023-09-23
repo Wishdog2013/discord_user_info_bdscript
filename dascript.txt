@@ -1,0 +1,36 @@
+// copy this into your BDScript editor //
+BDscript 2 Userinfo Code
+
+```$nomention
+$argsCheck[>1;❌️Please ping what user to see their info.]
+$thumbnail[$userAvatar[$mentioned[1]]]
+$footer[Requested by - $username]
+$onlyIf[$mentioned[1]!=; ❌ | **Pls mention someone !**]
+$var[hype;$hypesquad[$mentioned[1;yes]]]
+$var[brilliance]
+$var[bravery]
+$var[balance]
+$title[**USER INFO** 👥]
+$addField[👤 **Name:**;
+`$username[$mentioned[1]]`]
+$addField[🔖 **ID:**;
+`$mentioned[1]`]
+$addField[🤖 **Bot:**;
+`$isBot[$mentioned[1]]`]
+$addField[🏷 **Tag:**; 
+`#$discriminator[$mentioned[1]]`]
+$addField[💂‍♂️ **Admin:**;
+$isAdmin[$mentioned[1]]]
+$addField[📆 **Creation:**;
+`$creationDate[$mentioned[1;yes]]`]
+$addField[📆 **Join date:**;
+$creationDate[$mentioned[1]]]
+$addField[✉️ **DM Enabled:**;
+`$isUserDMEnabled[$mentioned[1]]`]
+$addField[🔗 **HypeSquad:**;
+$replaceText[$replaceText[$checkCondition[$var[hype]==];true; `This user doesn't belong to any HypeHouse.`;1];false;$replaceText[$replaceText[$replaceText[$var[hype];brilliance;$var[brilliance] `Brilliance`;1];bravery;$var[bravery] `Bravery`;1];balance;$var[balance] `Balance`;1];1]]
+ 
+$color[$replaceText[$replaceText[$checkCondition[$var[hype]==];true;00FF21;1];false;$replaceText[$replaceText[$replaceText[$var[hype];brilliance;F57B66;1];bravery;9B84EE;1];balance;44DDC1;1];1]]
+ 
+$addTimestamp
+$allowMention```
